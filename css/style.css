@@ -27,16 +27,22 @@ section .tab-content > .raitings {
     border-bottom: unset;
   }
 }
-section h1 {
+section .h1 {
   display: none;
+  font-size: 1.5625rem;
+}
+@media (max-width: 43.12375em) {
+  section .h1 {
+    font-size: 1.125rem;
+  }
 }
 @media (min-width: 43.125em) {
-  section h1:nth-child(1) {
+  section .h1:nth-child(1) {
     display: block;
   }
 }
 @media (max-width: 43.12375em) {
-  section h1:nth-child(2) {
+  section .h1:nth-child(2) {
     display: block;
   }
 }

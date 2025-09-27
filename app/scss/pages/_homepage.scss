@@ -15,8 +15,12 @@ section {
     }
   }
 
-  h1 {
+  .h1 {
     display: none;
+    font-size: u.rem(25);
+    @include u.breakpoint-down(mobsmall) {
+      font-size: u.rem(18);
+    }
     @include u.breakpoint(mobsmall) {
       &:nth-child(1) {
         display: block;
