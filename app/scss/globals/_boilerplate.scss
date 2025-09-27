@@ -26,6 +26,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-top: u.rem(16);
+  margin-bottom: u.rem(16);
   @include u.breakpoint(xsmall) {
     max-width: u.rem(809);
   }
