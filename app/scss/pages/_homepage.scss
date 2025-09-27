@@ -1,0 +1,318 @@
+@use "../util" as u;
+
+section {
+  .tab-content {
+    & > .raitings {
+      border-bottom: 1px solid rgba(217, 234, 250, 1);
+    }
+    @include u.breakpoint-down(mobsmall) {
+      & > .raitings:nth-last-child(1) {
+        border-bottom: unset;
+      }
+      & > .raitings:only-child {
+        border-bottom: unset;
+      }
+    }
+  }
+
+  h1 {
+    display: none;
+    @include u.breakpoint(mobsmall) {
+      &:nth-child(1) {
+        display: block;
+      }
+    }
+
+    @include u.breakpoint-down(mobsmall) {
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+  border: 1px solid rgba(217, 234, 250, 1);
+  border-radius: 16px;
+  .title {
+    padding: u.rem(34) u.rem(27) u.rem(18) u.rem(30);
+    @include u.breakpoint-down(mobsmall) {
+      padding: u.rem(12) u.rem(23) u.rem(12) u.rem(12);
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__dots {
+      display: flex;
+      flex-direction: column;
+      gap: u.rem(3);
+      justify-content: center;
+      height: min-content;
+      span {
+        font-family: u.$font-medium;
+        border-radius: 100%;
+        height: u.rem(4);
+        width: u.rem(4);
+        background-color: var(--black-color);
+      }
+    }
+    border-bottom: 1px solid rgba(217, 234, 250, 1);
+  }
+  .controls {
+    display: flex;
+    @include u.breakpoint-down(mobsmall) {
+      display: none;
+    }
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(217, 234, 250, 1);
+    padding: u.rem(25) u.rem(24) 0;
+    &__tab {
+      font-family: u.$font-light;
+      font-size: u.rem(14);
+      padding-bottom: u.rem(24);
+      cursor: pointer;
+      &.active {
+        font-family: u.$font-medium;
+        border-bottom: 2px solid var(--green-color);
+        cursor: auto;
+      }
+    }
+  }
+  .raitings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: u.rem(15) u.rem(20);
+    @include u.breakpoint-down(mobsmall) {
+      padding: u.rem(12);
+    }
+
+    &__logo {
+      &--check {
+        margin-bottom: u.rem(12);
+        margin-left: u.rem(-13);
+        width: u.rem(16);
+        @include u.breakpoint-down(mobsmall) {
+          margin-bottom: u.rem(8);
+          margin-left: u.rem(-10);
+          width: u.rem(12);
+        }
+        @include u.breakpoint-down(supersmall) {
+          margin-bottom: u.rem(6);
+          margin-left: u.rem(-8);
+          width: u.rem(10);
+        }
+      }
+      &--logo {
+        width: u.rem(115);
+        @include u.breakpoint-down(mobsmall) {
+          width: u.rem(80);
+        }
+        @include u.breakpoint-down(supersmall) {
+          width: u.rem(48);
+        }
+      }
+    }
+    &__stars {
+      display: flex;
+      align-items: center;
+      gap: u.rem(4);
+      @include u.breakpoint-down(xsmall) {
+        flex-direction: column;
+      }
+      &--stars {
+        display: flex;
+        align-items: center;
+        gap: u.rem(4);
+        img {
+          width: u.rem(16);
+          @include u.breakpoint-down(mobsmall) {
+            width: u.rem(12);
+          }
+          @include u.breakpoint-down(xsmall) {
+            display: none;
+            &:nth-child(1) {
+              display: block;
+            }
+          }
+        }
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      span {
+        font-size: u.rem(15);
+        margin-top: u.rem(2);
+        @include u.breakpoint-down(mobsmall) {
+          font-size: u.rem(12);
+        }
+        @include u.breakpoint-down(xsmall) {
+          margin-top: 0;
+        }
+        @include u.breakpoint-down(supersmall) {
+          font-size: u.rem(10);
+        }
+      }
+    }
+    &__comments {
+      display: flex;
+      align-items: center;
+      gap: u.rem(4);
+      font-size: u.rem(15);
+      @include u.breakpoint-down(mobsmall) {
+        font-size: u.rem(12);
+      }
+      img {
+        width: u.rem(16);
+        @include u.breakpoint-down(mobsmall) {
+          width: u.rem(12);
+        }
+      }
+      span {
+        font-size: u.rem(15);
+        margin-top: u.rem(2);
+        @include u.breakpoint-down(mobsmall) {
+          font-size: u.rem(12);
+          margin-top: u.rem(1);
+        }
+        @include u.breakpoint-down(supersmall) {
+          font-size: u.rem(10);
+        }
+      }
+    }
+    &__badges {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: u.rem(2);
+      &--badge {
+        padding: u.rem(6) u.rem(8);
+        border-radius: 30px;
+        &__exc {
+          background-color: var(--exclusive-bg-color);
+          color: var(--exclusive-color);
+        }
+        &__nob {
+          background-color: var(--no-bonus-bg-color);
+          color: var(--no-bonus-color);
+        }
+        &__nodep {
+          background-color: var(--no-deposit-bg-color);
+          color: var(--green-color);
+        }
+
+        font-size: u.rem(12);
+        @include u.breakpoint-down(mobsmall) {
+          font-size: u.rem(8);
+          padding: u.rem(4) u.rem(6);
+        }
+      }
+      &--price {
+        display: flex;
+        align-items: center;
+        gap: u.rem(4);
+        img {
+          width: u.rem(16);
+          @include u.breakpoint-down(mobsmall) {
+            width: u.rem(12);
+          }
+        }
+        span {
+          font-size: u.rem(15);
+          margin-top: u.rem(2);
+          @include u.breakpoint-down(mobsmall) {
+            font-size: u.rem(12);
+            margin-top: u.rem(1);
+          }
+          @include u.breakpoint-down(supersmall) {
+            font-size: u.rem(10);
+          }
+        }
+      }
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      gap: u.rem(8);
+      &--review {
+        font-size: u.rem(12);
+        text-transform: uppercase;
+        color: var(--black-color);
+        background-color: var(--btn-bg-color);
+        padding: u.rem(14) u.rem(24);
+        @include u.breakpoint-down(mobsmall) {
+          padding: u.rem(10) u.rem(12);
+          font-size: u.rem(10);
+        }
+        @include u.breakpoint-down(supersmall) {
+          padding: u.rem(8) u.rem(10);
+        }
+        border-radius: 6px;
+        cursor: pointer;
+        &:hover {
+          background-color: #efecec;
+        }
+      }
+      &--site {
+        font-size: u.rem(12);
+        text-transform: uppercase;
+        color: var(--white-color);
+        background-color: var(--green-color);
+        padding: u.rem(14) u.rem(24);
+        @include u.breakpoint-down(mobsmall) {
+          padding: u.rem(10) u.rem(12);
+          font-size: u.rem(10);
+        }
+        @include u.breakpoint-down(supersmall) {
+          padding: u.rem(8) u.rem(10);
+        }
+        border-radius: 6px;
+        cursor: pointer;
+        &:hover {
+          background-color: #08b254;
+        }
+      }
+    }
+  }
+  .afterrows {
+    display: flex;
+    @include u.breakpoint-down(mobsmall) {
+      display: none;
+    }
+    justify-content: space-between;
+    align-items: center;
+    padding: u.rem(28) u.rem(19);
+    &__left,
+    &__right {
+      font-size: u.rem(15);
+      cursor: pointer;
+    }
+    &__right {
+      color: var(--green-color);
+      border-bottom: 1px solid var(--green-color);
+    }
+    &__left {
+      display: flex;
+      align-items: center;
+      img {
+        margin-left: u.rem(3);
+      }
+    }
+  }
+}
+footer {
+  display: none;
+  @include u.breakpoint-down(mobsmall) {
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
+  padding-top: u.rem(23);
+  padding-bottom: u.rem(23);
+  font-size: u.rem(14);
+  text-transform: uppercase;
+  border: 1px solid rgba(217, 234, 250, 1);
+  border-radius: 16px;
+  margin: 0 u.rem(16) u.rem(16);
+  cursor: pointer;
+}

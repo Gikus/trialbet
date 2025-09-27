@@ -1,0 +1,8 @@
+@use "../util" as u;
+
+h1 {
+  font-size: u.rem(25);
+  @include u.breakpoint-down(mobsmall) {
+    font-size: u.rem(18);
+  }
+}

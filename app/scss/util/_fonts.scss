@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Rubik-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("http://localhost/trialbet/fonts/Rubik-Medium.ttf")
+    format("TrueType");
+}
+
+@font-face {
+  font-family: "Rubik-Light";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("http://localhost/trialbet/fonts/Rubik-Light.ttf") format("TrueType");
+}
+
+$font-medium: "Rubik-Medium", sans-serif;
+$font-light: "Rubik-Light", sans-serif;

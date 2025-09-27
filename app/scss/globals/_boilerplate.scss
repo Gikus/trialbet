@@ -1,0 +1,35 @@
+@use "../pages";
+@use "../util" as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: u.$font-medium;
+  font-size: u.rem(16);
+  color: var(--black-color);
+  line-height: 1.2;
+  letter-spacing: 2%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: u.rem(16);
+  @include u.breakpoint(xsmall) {
+    max-width: u.rem(809);
+  }
+  @include u.breakpoint-down(setsmall) {
+    margin: u.rem(16);
+  }
+}

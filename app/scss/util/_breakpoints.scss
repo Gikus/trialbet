@@ -1,0 +1,75 @@
+@use "functions" as f;
+
+$breakpoints-up: (
+  "xsmall": 0,
+  "supersmall": f.em(430),
+  "small": f.em(576),
+  "mobsmall": f.em(690),
+  "medium": f.em(768),
+  "large": f.em(992),
+  "xlarge": f.em(1200),
+  "xxlarge": f.em(1400),
+  "xxxlarge": f.em(1600),
+);
+
+$breakpoints-down: (
+  "xxxsmall": f.em(317),
+  "xxsmall": f.em(390.98),
+  "supersmall": f.em(429.98),
+  "xsmall": f.em(575.98),
+  "mobsmall": f.em(689.98),
+  "small": f.em(767.98),
+  "setsmall": f.em(832),
+  "medium": f.em(991.98),
+  "large": f.em(1199.98),
+  "xlarge": f.em(1399.98),
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+// Grid
+
+@mixin grid-min-max-cols(
+  $min-cols,
+  $max-cols,
+  $cols-min-width,
+  $grid-row-gap: 0px,
+  $grid-column-gap: 0px
+) {
+  --min-cols: #{$min-cols};
+  --max-cols: #{$max-cols};
+  --cols-min-width: #{$cols-min-width};
+  --grid-row-gap: #{$grid-row-gap};
+  --grid-column-gap: #{$grid-column-gap};
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(
+        (
+          100% / var(--min-cols) - var(--grid-column-gap) *
+            (var(--min-cols) - 1) / var(--min-cols)
+        ),
+        max(
+          var(--cols-min-width),
+          (
+            100% / var(--max-cols) - var(--grid-column-gap) *
+              (var(--max-cols) - 1) / var(--max-cols)
+          )
+        )
+      ),
+      1fr
+    )
+  );
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+}
