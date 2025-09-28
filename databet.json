@@ -1,0 +1,199 @@
+{
+  "byuser": [
+    {
+      "id": 1,
+      "logo": "images/1xstavka.svg",
+      "rating": 4.9,
+      "review_count": 325,
+      "bonus_amount": 25000,
+      "badge": "exclusive",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "logo": "images/fonbet.svg",
+      "rating": 4.8,
+      "review_count": 123,
+      "bonus_amount": 101000,
+      "badge": "no-deposit",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "logo": "images/leon.svg",
+      "rating": 4.7,
+      "review_count": 325,
+      "bonus_amount": 10000,
+      "badge": null,
+      "verified": true
+    },
+    {
+      "id": 4,
+      "logo": "images/winline.svg",
+      "rating": 4.6,
+      "review_count": 43,
+      "bonus_amount": 0,
+      "badge": "no-bonus",
+      "verified": false
+    },
+    {
+      "id": 5,
+      "logo": "images/melbet.svg",
+      "rating": 5,
+      "review_count": 34,
+      "bonus_amount": 25000,
+      "badge": "no-deposit",
+      "verified": true
+    },
+    {
+      "id": 6,
+      "logo": "images/1xstavka.svg",
+      "rating": 4.5,
+      "review_count": 109,
+      "bonus_amount": 9900,
+      "badge": null,
+      "verified": true
+    }
+  ],
+  "byeditors": [
+    {
+      "id": 1,
+      "logo": "images/1xstavka.svg",
+      "rating": 4.5,
+      "review_count": 109,
+      "bonus_amount": 9900,
+      "badge": null,
+      "verified": true
+    },
+    {
+      "id": 2,
+      "logo": "images/melbet.svg",
+      "rating": 4.5,
+      "review_count": 98,
+      "bonus_amount": 0,
+      "badge": "no-bonus",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "logo": "images/fonbet.svg",
+      "rating": 4.9,
+      "review_count": 210,
+      "bonus_amount": 15000,
+      "badge": "exclusive",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "logo": "images/leon.svg",
+      "rating": 5.0,
+      "review_count": 88,
+      "bonus_amount": 30000,
+      "badge": null,
+      "verified": true
+    },
+    {
+      "id": 5,
+      "logo": "images/winline.svg",
+      "rating": 4.7,
+      "review_count": 48,
+      "bonus_amount": 101000,
+      "badge": "no-deposit",
+      "verified": false
+    }
+  ],
+  "bybonus": [
+    {
+      "id": 1,
+      "logo": "images/winline.svg",
+      "rating": 4.3,
+      "review_count": 57,
+      "bonus_amount": 0,
+      "badge": "no-deposit",
+      "verified": false
+    },
+    {
+      "id": 2,
+      "logo": "images/1xstavka.svg",
+      "rating": 4.8,
+      "review_count": 305,
+      "bonus_amount": 20000,
+      "badge": null,
+      "verified": true
+    },
+    {
+      "id": 3,
+      "logo": "images/fonbet.svg",
+      "rating": 4.5,
+      "review_count": 127,
+      "bonus_amount": 10000,
+      "badge": "no-deposit",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "logo": "images/melbet.svg",
+      "rating": 5,
+      "review_count": 34,
+      "bonus_amount": 25000,
+      "badge": "no-deposit",
+      "verified": true
+    },
+    {
+      "id": 5,
+      "logo": "images/leon.svg",
+      "rating": 4.9,
+      "review_count": 395,
+      "bonus_amount": 30000,
+      "badge": null,
+      "verified": true
+    }
+  ],
+  "bysubrating": [
+    {
+      "id": 1,
+      "logo": "images/leon.svg",
+      "rating": 5.0,
+      "review_count": 112,
+      "bonus_amount": 50000,
+      "badge": "exclusive",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "logo": "images/winline.svg",
+      "rating": 4.4,
+      "review_count": 76,
+      "bonus_amount": 12000,
+      "badge": null,
+      "verified": true
+    },
+    {
+      "id": 3,
+      "logo": "images/fonbet.svg",
+      "rating": 4.8,
+      "review_count": 123,
+      "bonus_amount": 25000,
+      "badge": "exclusive",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "logo": "images/1xstavka.svg",
+      "rating": 4.8,
+      "review_count": 325,
+      "bonus_amount": 24000,
+      "badge": "exclusive",
+      "verified": true
+    },
+    {
+      "id": 5,
+      "logo": "images/melbet.svg",
+      "rating": 4.9,
+      "review_count": 30,
+      "bonus_amount": 25000,
+      "badge": "no-deposit",
+      "verified": false
+    }
+  ]
+}

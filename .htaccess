@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /trialbet/
+    # Don't rewrite requests for files, directories, or specific file types
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Rewrite all other requests to index.html
+    RewriteRule ^ index.html [L]
+</IfModule>
