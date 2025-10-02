@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /trialbet/
+    RewriteBase https://gikus.github.io/trialbet/
     # Don't rewrite requests for files, directories, or specific file types
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
