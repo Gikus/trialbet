@@ -88,7 +88,44 @@ section {
     @include u.breakpoint-down(mobsmall) {
       padding: u.rem(12);
     }
-
+    & > div {
+      &:nth-child(1) {
+        width: u.rem(123);
+        @include u.breakpoint-down(mobsmall) {
+          width: u.rem(90);
+        }
+        @include u.breakpoint-down(supersmall) {
+          width: u.rem(54);
+        }
+      }
+      &:nth-child(2) {
+        width: u.rem(123);
+        @include u.breakpoint-down(xsmall) {
+          width: u.rem(19);
+        }
+      }
+      &:nth-child(3) {
+        width: u.rem(52);
+        @include u.breakpoint-down(mobsmall) {
+          width: u.rem(42);
+        }
+        @include u.breakpoint-down(xsmall) {
+          width: u.rem(38);
+        }
+      }
+      &:nth-child(4) {
+        width: u.rem(102);
+        @include u.breakpoint-down(mobsmall) {
+          width: u.rem(70);
+        }
+        @include u.breakpoint-down(xxsmall) {
+          width: u.rem(66);
+        }
+      }
+      &:nth-child(5) {
+        width: auto;
+      }
+    }
     &__logo {
       &--check {
         margin-bottom: u.rem(12);

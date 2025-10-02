@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTabContent(dataKey, tabClass);
 
     // Update URL
-    const newUrl = `http://localhost/trialbet/topbk?type=${urlParam}${
+    const base = window.BASE_URL;
+    const newUrl = `${base}topbk?type=${urlParam}${
       tabClass === "fourth" ? "&id=reliability" : ""
     }`;
     history.pushState({}, "", newUrl);
