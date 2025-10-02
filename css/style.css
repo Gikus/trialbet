@@ -3,14 +3,14 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("http://localhost/trialbet/fonts/Rubik-Medium.ttf") format("TrueType");
+  src: url("https://Gikus.github.io/trialbet/fonts/Rubik-Medium.ttf") format("TrueType");
 }
 @font-face {
   font-family: "Rubik-Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("http://localhost/trialbet/fonts/Rubik-Light.ttf") format("TrueType");
+  src: url("https://Gikus.github.io/trialbet/fonts/Rubik-Light.ttf") format("TrueType");
 }
 section {
   border: 1px solid rgb(217, 234, 250);
